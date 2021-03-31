@@ -1,0 +1,11 @@
+clear
+clc
+addpath(genpath('.'));
+load('3_x.mat');
+load('3_y.mat');
+u=linspace(0,4,100);
+v_l=Lagrange_1(x,y,u);
+v_n=Newton_1(x,y,u);
+plot(u,v_l,u,v_n,'*','MarkerSize',4)
+legend('Lagrange','Newton')
+rmpath(genpath('.'));
